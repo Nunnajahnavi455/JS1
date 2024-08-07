@@ -1000,19 +1000,20 @@ let users = [
     { "id": 999, "name": "Naomi", "email": "nentresrq@taobao.com", "gender": "Female" },
     { "id": 1000, "name": "Imogen", "email": "iellardrr@nymag.com", "gender": "Female" }
 ]
-function getUser() {
+function getUsers() {
+    console.log(document.getElementById('userData'))
     let rows = ""
-    for (r of users) {
-        if (r.gender == "Female") {
-
-
+    for (j of users) {
+        if (j.gender !== "Male" && j.gender !== 'Female') {
             rows = rows + `<tr>
-                            <td>${r.id}</td>
-                            <td>${r.name}</td>
-                            <td>${r.email}</td>
-                            <td>${r.gender}</td>
+                            <td>${j.id}</td>
+                            <td>${j.name}</td>
+                            <td>${j.email}</td>
+                            <td>${j.gender}</td>
                         </tr>`
         }
     }
-    document.getElementsByTagName('tbody').innerHTML = rows
+    document.querySelector('.abc').innerHTML=rows
+    //document.getElementById('userData').innerHTML=rows
+    //document.getElementsByTagName('tbody')[0].innerHTML = rows
 }
