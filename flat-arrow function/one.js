@@ -8,7 +8,7 @@ add()
 add()
 
 // //advantages of flat arrow function
-// 1)consize/short code 
+// 1)coin size/short code 
 // 2)implicit return 
 // 3)this -keyword
 //        -{}
